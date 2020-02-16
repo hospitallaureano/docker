@@ -1,12 +1,12 @@
 #Build stage, useful for a better use of cache ;)
 FROM composer:1.7.0 AS build
 
-ENV NOVOSGA_VER=v2.0.8 \
-    NOVOSGA_MD5=65d1639c937291b79080c419cbf1eefc
+ENV NOVOSGA_VER=v1.0 \
+    NOVOSGA_MD5=863a784ef4c724ebd06956d4b0de52aa
 
 ENV NOVOSGA_FILE=novosga.tar.gz \
     NOVOSGA_DIR=/var/www/html \
-    NOVOSGA_URL=https://github.com/novosga/novosga/archive/${NOVOSGA_VER}.tar.gz \
+    NOVOSGA_URL=https://github.com/wlamir/sga/archive/${NOVOSGA_VER}.tar.gz \
     APP_ENV=prod \
     DATABASE_URL=mysql://127.0.0.1:3306/novosga?charset=utf8mb4&serverVersion=5.7
 
