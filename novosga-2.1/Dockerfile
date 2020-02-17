@@ -77,4 +77,6 @@ COPY supervisor/websocket.conf /etc/supervisor/conf.d/websocket.conf
 ADD crontab/cron /etc/cron.d/app
 RUN chmod 644 /etc/cron.d/app
 
+ENTRYPOINT ["sh", "start.sh"]
+
 CMD ["start.sh"]
