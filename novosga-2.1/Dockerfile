@@ -8,7 +8,7 @@ ENV NOVOSGA_FILE=novosga.tar.gz \
     NOVOSGA_DIR=/var/www/html \
     NOVOSGA_URL=https://github.com/wlamir/sga/archive/${NOVOSGA_VER}.tar.gz \
     APP_ENV=prod \
-    DATABASE_URL=mysql://127.0.0.1:3306/novosga?charset=utf8mb4&serverVersion=5.7
+    DATABASE_URL=mysql://mysqldb:3306/novosga?charset=utf8mb4&serverVersion=5.7
 
 RUN set -xe \
     && mkdir -p $NOVOSGA_DIR && cd $NOVOSGA_DIR \
